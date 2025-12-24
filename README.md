@@ -10,7 +10,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-[Live Demo](#) • [Report Bug](mailto:vijayadithyak@gmail.com) • [Request Feature](mailto:vijayadithyak@gmail.com)
+[Report Bug](mailto:vijayadithyak@gmail.com) • [Request Feature](mailto:vijayadithyak@gmail.com)
 
 </div>
 
