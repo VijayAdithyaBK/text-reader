@@ -16,45 +16,69 @@
 
 ---
 
-## 🌟 Project Highlights
-
-This project demonstrates **full-stack development expertise** with a focus on modern web technologies, user experience, and real-time audio processing. Built as a portfolio piece to showcase:
-
-- 🎨 **Modern UI/UX Design** - Clean, intuitive interface with smooth animations powered by Framer Motion
-- 🏗️ **Full-Stack Architecture** - React/TypeScript frontend + Python FastAPI backend
-- 🎵 **Real-time Audio Processing** - Custom waveform visualization and playback controls
-- 📄 **Multi-Format Support** - PDF, DOCX, TXT, and Markdown file parsing
-- 🎭 **Voice Customization** - Multiple voices with adjustable pitch, rate, and preset configurations
-- ⚡ **Performance Optimized** - Built with Vite for lightning-fast development and production builds
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#tech-stack">Tech Stack</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
 ---
 
-## 📸 Screenshots
+## 🌟 About The Project
 
-> *Add screenshots of your application here to showcase the UI*
+This project demonstrates **full-stack development expertise** with a focus on modern web technologies, user experience, and real-time audio processing. It is built as a portfolio piece to showcase:
 
----
+- 🎨 **Modern UI/UX Design** - Clean, intuitive interface with smooth animations powered by Framer Motion.
+- 🏗️ **Full-Stack Architecture** - Robust React/TypeScript frontend paired with a high-performance Python FastAPI backend.
+- 🎵 **Real-time Audio Processing** - Custom waveform visualization and seamless playback controls.
+- 📄 **Multi-Format Support** - Intelligent parsing of PDF, DOCX, TXT, and Markdown files.
+- 🎭 **Voice Customization** - Diverse voice options with adjustable pitch, rate, and presets.
+- ⚡ **Performance Optimized** - Lightning-fast development and production builds using Vite.
 
-## ✨ Key Features
+> *[Add screenshots of your application here to showcase the UI]*
 
-### 🎤 Voice & Audio
-- **Voice Gallery** - Browse and select from multiple TTS voices
-- **Custom Voice Presets** - Pre-configured celebrity/character voices with optimized settings
-- **Real-time Controls** - Adjust speech rate and pitch on the fly
-- **Waveform Visualization** - Visual feedback during playback
-- **Audio Download** - Export generated speech as MP3 files
+### ✨ Key Features
 
-### 📁 File Processing
-- **Multi-Format Support** - PDF, DOCX, TXT, Markdown
-- **Smart Text Extraction** - Preserves formatting and structure
-- **Drag & Drop Upload** - Intuitive file handling
-- **Direct Text Input** - Type or paste text directly
+#### 🎤 Voice & Audio
+- **Voice Gallery** - Browse and select from a wide range of TTS voices.
+- **Custom Voice Presets** - Pre-configured celebrity/character voices with optimized settings.
+- **Real-time Controls** - Adjust speech rate and pitch on the fly.
+- **Waveform Visualization** - Visual feedback during playback.
+- **Audio Download** - Export generated speech as MP3 files.
 
-### 🎨 User Experience
-- **Responsive Design** - Works seamlessly on desktop and mobile
-- **Modern UI Components** - Glassmorphism, smooth animations, and vibrant colors
-- **Real-time Feedback** - Loading states and progress indicators
-- **Keyboard Shortcuts** - Efficient workflow for power users
+#### 📁 File Processing
+- **Multi-Format Support** - PDF, DOCX, TXT, Markdown.
+- **Smart Text Extraction** - Preserves formatting and structure.
+- **Drag & Drop Upload** - Intuitive file handling.
+- **Direct Text Input** - Type or paste text directly.
+
+#### 🎨 User Experience
+- **Responsive Design** - Works seamlessly on desktop and mobile.
+- **Modern UI Components** - Glassmorphism, smooth animations, and vibrant colors.
+- **Real-time Feedback** - Loading states and progress indicators.
+- **Keyboard Shortcuts** - Efficient workflow for power users.
 
 ---
 
@@ -91,21 +115,21 @@ This project demonstrates **full-stack development expertise** with a focus on m
 ### Installation
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/VijayAdithyaBK/text-reader.git
-cd text-reader
-```
+   ```bash
+   git clone https://github.com/VijayAdithyaBK/text-reader.git
+   cd text-reader
+   ```
 
 2. **Install frontend dependencies**
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. **Install backend dependencies**
-```bash
-cd backend
-pip install -r requirements.txt
-```
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   ```
 
 ### Running the Application
 
@@ -117,21 +141,51 @@ pip install -r requirements.txt
 **Option 2: Manual startup**
 
 1. Start the backend server:
-```bash
-cd backend
-uvicorn main:app --reload
-```
+   ```bash
+   cd backend
+   uvicorn main:app --reload
+   ```
 
 2. In a new terminal, start the frontend:
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 3. Open your browser to `http://localhost:5173`
 
 ---
 
-## 📂 Project Structure
+## ⚡ Usage
+
+### 🚦 API Endpoints
+
+| Method | Endpoint  | Description                |
+| ------ | --------- | -------------------------- |
+| `GET`  | `/voices` | Fetch available TTS voices |
+| `POST` | `/tts`    | Generate speech from text  |
+
+**Request Body for `/tts`:**
+```json
+{
+  "text": "Hello, world!",
+  "voice": "en-US-GuyNeural",
+  "rate": "+0%",
+  "pitch": "+0Hz"
+}
+```
+
+### 🔧 Configuration
+
+The application can be customized through:
+- **Voice Presets** (`src/data/voicePresets.ts`) - Add custom voice configurations
+- **Backend URL** (`src/App.tsx`) - Configure API endpoint
+- **Tailwind Config** - Customize design tokens
+
+---
+
+## 🏗️ Architecture
+
+### 📂 Project Structure
 
 ```
 text-reader/
@@ -154,57 +208,16 @@ text-reader/
 └── vite.config.ts
 ```
 
----
+### 🎯 Technical Achievements
 
-## 🎯 Technical Achievements
+- **Separation of Concerns** - Clean frontend/backend architecture.
+- **Type Safety** - Full TypeScript coverage for maintainability.
+- **API Design** - RESTful API with clear endpoints.
+- **State Management** - React hooks for efficient state handling.
+- **Performance Optimizations** - Lazy loading components, efficient blob handling, and tree-shaking.
+- **Code Quality** - ESLint integration, modular component architecture, and graceful error handling.
 
-### Architecture Decisions
-- **Separation of Concerns** - Clean frontend/backend architecture
-- **Type Safety** - Full TypeScript coverage for maintainability
-- **API Design** - RESTful API with clear endpoints
-- **State Management** - React hooks for efficient state handling
-
-### Performance Optimizations
-- **Lazy Loading** - Components loaded on demand
-- **Audio Optimization** - Efficient blob handling and cleanup
-- **Build Optimization** - Tree-shaking and code splitting with Vite
-
-### Code Quality
-- **ESLint Integration** - Consistent code style
-- **Component Architecture** - Reusable, modular components
-- **Error Handling** - Graceful fallbacks and user feedback
-
----
-
-## 🔧 Configuration
-
-The application can be customized through:
-- **Voice Presets** (`src/data/voicePresets.ts`) - Add custom voice configurations
-- **Backend URL** (`src/App.tsx`) - Configure API endpoint
-- **Tailwind Config** - Customize design tokens
-
----
-
-## 🚦 API Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| `GET` | `/voices` | Fetch available TTS voices |
-| `POST` | `/tts` | Generate speech from text |
-
-**Request Body for `/tts`:**
-```json
-{
-  "text": "Hello, world!",
-  "voice": "en-US-GuyNeural",
-  "rate": "+0%",
-  "pitch": "+0Hz"
-}
-```
-
----
-
-## 📊 Performance Metrics
+### 📊 Performance Metrics
 
 - **Build Size**: Optimized production bundle
 - **First Contentful Paint**: <1s
@@ -213,7 +226,7 @@ The application can be customized through:
 
 ---
 
-## 🔜 Future Enhancements
+## 🔜 Roadmap
 
 - [ ] Multi-language support with i18n
 - [ ] User authentication and saved preferences
@@ -226,7 +239,25 @@ The application can be customized through:
 
 ---
 
-## 👨‍💻 Developer
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## � License
+
+This project is available for portfolio demonstration purposes.
+
+---
+
+## 👨‍💻 Contact
 
 **Vijay Adithya B K**
 
@@ -237,17 +268,10 @@ The application can be customized through:
 
 ---
 
-## 📝 License
-
-This project is available for portfolio demonstration purposes.
-
----
-
 ## 🙏 Acknowledgments
 
 - Microsoft Edge TTS for voice synthesis
 - The React and FastAPI communities
-- All open-source contributors
 
 ---
 
@@ -255,6 +279,8 @@ This project is available for portfolio demonstration purposes.
 
 **⭐ If you find this project interesting, please consider giving it a star! ⭐**
 
-Made with ❤️ by Vijay Adithya B K
-
 </div>
+
+<p align="center">
+  <i>⚡ Crafted by Vijay Adithya B K</i>
+</p>
